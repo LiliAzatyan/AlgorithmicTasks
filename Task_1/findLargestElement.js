@@ -1,10 +1,9 @@
-
 function findLargestElement(array, index, tmp) {
     if (index < array.length) {
         if (array[index] > tmp) {
             tmp = array[index];
         }
-        return findLargestElement(arr, ++index, tmp)
+        return findLargestElement(arr, ++index, tmp);
     }
     return tmp;
 }
