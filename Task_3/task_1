@@ -1,6 +1,6 @@
 const fs = require('fs');
 const array = [];
-const max_size = 40;
+const max_size = 4000000000;
 for (let i = 0; i <= max_size; ++i) {
     array.push(Math.random(new Int32Array()) * max_size) + '\n';
     fs.appendFile('text.txt', "" + array, function(err, data) {});
