@@ -1,0 +1,15 @@
+const fs = require('fs');
+
+const array = [];
+const max_size = 10;
+for (let i = 0; i <= max_size; ++i) {
+    array.push(Math.random(new Int32Array()) * max_size) + '\n';
+    fs.writeFileSync('text.txt', "" + array, function(err, data) {});
+}
+
+const fileContents = fs.readFileSync('text.txt', 'utf8');
+const lines = fileContents.split(',');
+lines.sort();
+const sortedFileContents = lines.join('\n');
+
+fs.writeFileSync('text.txt', sortedFileContents);
